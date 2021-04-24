@@ -22,7 +22,7 @@ pod 'RxSVP'
 
 ## Author
 
-hi@liangdahong.com, hi@liangdahong.com
+hi@liangdahong.com
 
 ## License
 
