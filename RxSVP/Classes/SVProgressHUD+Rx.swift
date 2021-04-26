@@ -23,47 +23,47 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import SVProgressHUD
+import class SVProgressHUD.SVProgressHUD
 
 extension Reactive where Base: SVProgressHUD {
     
     // MARK: loding
     
-    static var show: Binder<String?> {
+     public static var show: Binder<String?> {
         .init(UIApplication.shared) { Base.show(withStatus: $1) }
     }
     
-    static var showImage: Binder<(UIImage, String)> {
+    public static var showImage: Binder<(UIImage, String)> {
         .init(UIApplication.shared) { Base.show($1.0, status: $1.1) }
     }
     
     // MARK: toast
     
-    static var info: Binder<String?> {
+    public static var info: Binder<String?> {
         .init(UIApplication.shared) { Base.showInfo(withStatus: $1) }
     }
     
-    static var error: Binder<String?> {
+    public static var error: Binder<String?> {
         .init(UIApplication.shared) { Base.showError(withStatus: $1) }
     }
     
-    static var success: Binder<String?> {
+    public static var success: Binder<String?> {
         .init(UIApplication.shared) { Base.showSuccess(withStatus: $1) }
     }
     
     // MARK: progress
     
-    static var progress: Binder<Float> {
+    public static var progress: Binder<Float> {
         .init(UIApplication.shared) { Base.showProgress($1) }
     }
     
-    static var progressStatus: Binder<(Float, String)> {
+    public static var progressStatus: Binder<(Float, String)> {
         .init(UIApplication.shared) { Base.showProgress($1.0, status: $1.1) }
     }
     
     // MARK: progress
     
-    static var dismiss: Binder<()> {
+    public static var dismiss: Binder<()> {
         .init(UIApplication.shared) { _,_ in Base.dismiss() }
     }
 }

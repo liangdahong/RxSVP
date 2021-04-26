@@ -1,0 +1,6 @@
+framework module RxSVP {
+  umbrella header "RxSVP-umbrella.h"
+
+  export *
+  module * { export * }
+}

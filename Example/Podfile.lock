@@ -6,14 +6,15 @@ PODS:
     - RxSwift (= 6.1.0)
   - RxRelay (6.1.0):
     - RxSwift (= 6.1.0)
+  - RxSVP (0.1.0):
+    - RxCocoa
+    - SVProgressHUD
   - RxSwift (6.1.0)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - "NSObject+Rx"
-  - RxCocoa
-  - RxSwift
-  - SVProgressHUD
+  - RxSVP (from `../`)
 
 SPEC REPOS:
   trunk:
@@ -23,13 +24,18 @@ SPEC REPOS:
     - RxSwift
     - SVProgressHUD
 
+EXTERNAL SOURCES:
+  RxSVP:
+    :path: "../"
+
 SPEC CHECKSUMS:
   "NSObject+Rx": 49ffbf55ad0bbc29a44547db63a9e33caf0c5d60
   RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
   RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
+  RxSVP: f98e537d8ed65d8fbb0c9b21b73204b3f892df5e
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: a2c89763bc40687945d057bcd6c133e66bd2688d
+PODFILE CHECKSUM: 9b581c8bd510cb1b811443bdf814d5d1daaaa9f4
 
 COCOAPODS: 1.10.1
