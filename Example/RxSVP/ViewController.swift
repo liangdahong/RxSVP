@@ -25,6 +25,7 @@ import RxSwift
 import RxCocoa
 import NSObject_Rx
 import SVProgressHUD
+import RxSVP
 
 class ViewController: UIViewController {
 

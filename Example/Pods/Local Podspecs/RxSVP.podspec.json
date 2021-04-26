@@ -1,7 +1,7 @@
 {
   "name": "RxSVP",
   "version": "0.1.0",
-  "summary": "A short description of RxSVP.",
+  "summary": "RxSwift SVProgressHUD",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/hi@liangdahong.com/RxSVP",
   "license": {
@@ -18,5 +18,13 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "RxSVP/Classes/**/*"
+  "source_files": "RxSVP/Classes/**/*",
+  "dependencies": {
+    "RxCocoa": [
+
+    ],
+    "SVProgressHUD": [
+
+    ]
+  }
 }
