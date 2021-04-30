@@ -29,7 +29,7 @@ extension Reactive where Base: SVProgressHUD {
     
     // MARK: loding
     
-     public static var show: Binder<String?> {
+    public static var show: Binder<String?> {
         .init(UIApplication.shared) { Base.show(withStatus: $1) }
     }
     
@@ -61,7 +61,7 @@ extension Reactive where Base: SVProgressHUD {
         .init(UIApplication.shared) { Base.showProgress($1.0, status: $1.1) }
     }
     
-    // MARK: progress
+    // MARK: dismiss
     
     public static var dismiss: Binder<()> {
         .init(UIApplication.shared) { _,_ in Base.dismiss() }
