@@ -6,7 +6,7 @@ PODS:
     - RxSwift (= 6.1.0)
   - RxRelay (6.1.0):
     - RxSwift (= 6.1.0)
-  - RxSVP (0.1.0):
+  - RxSVP (0.1.2):
     - RxCocoa
     - SVProgressHUD
   - RxSwift (6.1.0)
@@ -32,7 +32,7 @@ SPEC CHECKSUMS:
   "NSObject+Rx": 49ffbf55ad0bbc29a44547db63a9e33caf0c5d60
   RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
   RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
-  RxSVP: f98e537d8ed65d8fbb0c9b21b73204b3f892df5e
+  RxSVP: f9f47b29bc54332ee778cee175b3703c07f0130c
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 

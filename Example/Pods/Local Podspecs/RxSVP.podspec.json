@@ -1,19 +1,19 @@
 {
   "name": "RxSVP",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "summary": "RxSwift SVProgressHUD",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/hi@liangdahong.com/RxSVP",
+  "homepage": "https://github.com/liangdahong/RxSVP",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "hi@liangdahong.com": "hi@liangdahong.com"
+    "liangdahong": "hi@liangdahong.com"
   },
   "source": {
-    "git": "https://github.com/hi@liangdahong.com/RxSVP.git",
-    "tag": "0.1.0"
+    "git": "git@github.com:liangdahong/RxSVP.git",
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "9.0"

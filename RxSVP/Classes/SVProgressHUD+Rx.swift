@@ -37,7 +37,7 @@ extension Reactive where Base: SVProgressHUD {
         .init(UIApplication.shared) { Base.show(withStatus: $1) }
     }
     
-    public static var showImage: Binder<(UIImage, String?)> {
+    public static var loadingImageStatus: Binder<(UIImage, String?)> {
         .init(UIApplication.shared) { Base.show($1.0, status: $1.1) }
     }
     
