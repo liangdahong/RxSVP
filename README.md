@@ -20,6 +20,22 @@ it, simply add the following line to your Podfile:
 pod 'RxSVP'
 ```
 
+```swift
+textField.rx.text.orEmpty
+    .filter { $0.count > 5 }
+    .map { _ in () }
+    .bind(to: SVProgressHUD.rx.info(status: "密码不可以大于 5 位"))
+    .disposed(by: rx.disposeBag)
+
+loginButton.rx.tap
+    .bind(to: SVProgressHUD.rx.loading(status: "登录中..."))
+    .disposed(by: rx.disposeBag)
+
+dismissButton.rx.tap
+    .bind(to: SVProgressHUD.rx.dismiss)
+    .disposed(by: rx.disposeBag)
+```
+
 ## Author
 
 hi@liangdahong.com
