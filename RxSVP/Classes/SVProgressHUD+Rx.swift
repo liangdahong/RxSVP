@@ -29,30 +29,38 @@ extension Reactive where Base: SVProgressHUD {
     
     // MARK: loding
     
-    public static var loading: Binder<()> {
-        .init(UIApplication.shared) { _,_ in Base.show() }
-    }
-    
-    public static var loadingStatus: Binder<String> {
+    public static var loading: Binder<String> {
         .init(UIApplication.shared) { Base.show(withStatus: $1) }
     }
     
-    public static var loadingImageStatus: Binder<(UIImage, String?)> {
-        .init(UIApplication.shared) { Base.show($1.0, status: $1.1) }
+    public static func loading(status: String? = nil) -> Binder<()> {
+        .init(UIApplication.shared, binding: { _, _ in Base.show(withStatus: status) })
     }
     
     // MARK: toast
     
-    public static var info: Binder<String?> {
+    public static var info: Binder<String> {
         .init(UIApplication.shared) { Base.showInfo(withStatus: $1) }
     }
     
-    public static var error: Binder<String?> {
+    public static func info(status: String? = nil) -> Binder<()> {
+        .init(UIApplication.shared, binding: { _, _ in Base.showInfo(withStatus: status) })
+    }
+    
+    public static var error: Binder<String> {
         .init(UIApplication.shared) { Base.showError(withStatus: $1) }
     }
     
-    public static var success: Binder<String?> {
+    public static func error(status: String? = nil) -> Binder<()> {
+        .init(UIApplication.shared, binding: { _, _ in Base.showError(withStatus: status) })
+    }
+    
+    public static var success: Binder<String> {
         .init(UIApplication.shared) { Base.showSuccess(withStatus: $1) }
+    }
+    
+    public static func success(status: String? = nil) -> Binder<()> {
+        .init(UIApplication.shared, binding: { _, _ in Base.showSuccess(withStatus: status) })
     }
     
     // MARK: progress
@@ -61,8 +69,8 @@ extension Reactive where Base: SVProgressHUD {
         .init(UIApplication.shared) { Base.showProgress($1) }
     }
     
-    public static var progressStatus: Binder<(Float, String?)> {
-        .init(UIApplication.shared) { Base.showProgress($1.0, status: $1.1) }
+    public static func progress(progress: Float, status: String? = nil) -> Binder<()> {
+        .init(UIApplication.shared) { _,_ in Base.showProgress(progress, status: status) }
     }
     
     // MARK: dismiss

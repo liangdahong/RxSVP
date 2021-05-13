@@ -28,23 +28,22 @@ import SVProgressHUD
 import RxSVP
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var dismissButton: UIButton!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         textField.rx.text.orEmpty
             .filter { $0.count > 5 }
-            .map { _ in "密码不可以大于 5 位" }
-            .bind(to: SVProgressHUD.rx.info)
+            .map { _ in () }
+            .bind(to: SVProgressHUD.rx.info(status: "密码不可以大于 5 位"))
             .disposed(by: rx.disposeBag)
         
         loginButton.rx.tap
-            .map { "未登陆" }
-            .bind(to: SVProgressHUD.rx.error)
+            .bind(to: SVProgressHUD.rx.loading(status: "登录中..."))
             .disposed(by: rx.disposeBag)
         
         dismissButton.rx.tap
