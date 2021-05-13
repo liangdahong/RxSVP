@@ -93,7 +93,6 @@
 		607FACD21AFB9204008FA782 /* Example for RxSVP */ = {
 			isa = PBXGroup;
 			children = (
-				65A0F4B62634780000E14A6A /* RxSVP */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -138,14 +137,6 @@
 				9FC3B293DF6A0013C7750139 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
-		65A0F4B62634780000E14A6A /* RxSVP */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = RxSVP;
-			path = ../../RxSVP;
 			sourceTree = "<group>";
 		};
 		8A09BF6CEF5BB93F8A67E361 /* Pods */ = {
