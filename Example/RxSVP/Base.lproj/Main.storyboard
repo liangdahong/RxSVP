@@ -19,38 +19,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWz-qS-LG7">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWz-qS-LG7">
                                 <rect key="frame" x="46" y="170" width="283" height="30"/>
-                                <state key="normal" title="未登陆"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="loading"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tlo-xu-GXd">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tlo-xu-GXd">
                                 <rect key="frame" x="36" y="100" width="303" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="97r-Lm-Xk3"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfy-Wx-cbq">
-                                <rect key="frame" x="156" y="209" width="63" height="30"/>
-                                <state key="normal" title="隐藏 SVP"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOX-OM-KHf">
+                                <rect key="frame" x="175" y="233" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="info"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRN-Af-SqS">
+                                <rect key="frame" x="180" y="297" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="error"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3O-a0-v0F">
+                                <rect key="frame" x="173" y="362" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="succes"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfy-Wx-cbq">
+                                <rect key="frame" x="178" y="568" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="hiden"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="jWz-qS-LG7" firstAttribute="top" secondItem="Tlo-xu-GXd" secondAttribute="bottom" constant="20" id="6pP-8z-K0i"/>
-                            <constraint firstItem="Tlo-xu-GXd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="CVt-UR-PNQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jWz-qS-LG7" secondAttribute="trailing" constant="30" id="Hax-Fo-Eha"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Tlo-xu-GXd" secondAttribute="trailing" constant="20" id="QXJ-Wi-UWj"/>
-                            <constraint firstItem="Tlo-xu-GXd" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="100" id="UpT-Pw-tSC"/>
-                            <constraint firstItem="tfy-Wx-cbq" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="coz-Ei-mkt"/>
-                            <constraint firstItem="jWz-qS-LG7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="lgk-pJ-9A6"/>
-                            <constraint firstItem="tfy-Wx-cbq" firstAttribute="top" secondItem="jWz-qS-LG7" secondAttribute="bottom" constant="20" id="v1t-ny-mLi"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="dismissButton" destination="tfy-Wx-cbq" id="AYN-bx-cd5"/>
-                        <outlet property="loginButton" destination="jWz-qS-LG7" id="VLh-K1-NxC"/>
+                        <outlet property="errorButton" destination="QRN-Af-SqS" id="RLM-YT-AZj"/>
+                        <outlet property="infoButton" destination="AOX-OM-KHf" id="bAV-ab-0lh"/>
+                        <outlet property="loginButton" destination="jWz-qS-LG7" id="6HO-gx-QsP"/>
+                        <outlet property="succesButton" destination="V3O-a0-v0F" id="BXh-ga-uuO"/>
                         <outlet property="textField" destination="Tlo-xu-GXd" id="wTi-ii-93m"/>
                     </connections>
                 </viewController>

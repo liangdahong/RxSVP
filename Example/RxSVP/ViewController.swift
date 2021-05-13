@@ -31,6 +31,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var infoButton: UIButton!
+    @IBOutlet weak var errorButton: UIButton!
+    @IBOutlet weak var succesButton: UIButton!
     @IBOutlet weak var dismissButton: UIButton!
     
     override func viewDidLoad() {
@@ -44,6 +47,20 @@ class ViewController: UIViewController {
         
         loginButton.rx.tap
             .bind(to: SVProgressHUD.rx.loading(status: "登录中..."))
+            .disposed(by: rx.disposeBag)
+        
+        infoButton.rx.tap
+            .map { _ in "请登录" }
+            .bind(to: SVProgressHUD.rx.info)
+            .disposed(by: rx.disposeBag)
+        
+        errorButton.rx.tap
+            .map { _ in "网络错误" }
+            .bind(to: SVProgressHUD.rx.error)
+            .disposed(by: rx.disposeBag)
+        
+        succesButton.rx.tap
+            .bind(to: SVProgressHUD.rx.success(status: "登录成功"))
             .disposed(by: rx.disposeBag)
         
         dismissButton.rx.tap
